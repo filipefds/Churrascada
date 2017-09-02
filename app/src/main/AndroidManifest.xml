@@ -20,9 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.Main2Activity" android:label="Lista de Compras"/>
-        <activity android:name=".view.Main3Activity" android:label="Formulário"/>
-        <activity android:name=".view.Main4Activity" android:label="Histórico"/>
+        <activity
+            android:name=".view.Main2Activity"
+            android:label="Lista de Compras" />
+        <activity
+            android:name=".view.Main3Activity"
+            android:label="Formulário" />
+        <activity
+            android:name=".view.Main4Activity"
+            android:label="Histórico" />
+        <activity android:name=".view.Main5Activity"></activity>
     </application>
 
 </manifest>
