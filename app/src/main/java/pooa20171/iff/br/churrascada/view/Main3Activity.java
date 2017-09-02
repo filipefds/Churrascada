@@ -17,8 +17,9 @@ import org.json.JSONObject;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
+import io.realm.Realm;
 import pooa20171.iff.br.churrascada.R;
-import pooa20171.iff.br.churrascada.controller.Evento;
+import pooa20171.iff.br.churrascada.realm.Evento;
 import pooa20171.iff.br.churrascada.controller.HTTPDataHandler;
 
 public class Main3Activity extends AppCompatActivity {
@@ -65,9 +66,9 @@ public class Main3Activity extends AppCompatActivity {
         cont_crianca.setText("Total de crianças: "+crianca);
         TextView valorTotal = (TextView) findViewById(R.id.total_consumo);
         valorTotal.setText("Total gasto: R$"+formatarFloat.format(Float.parseFloat(valor_total)));
-        TextView rateioHomem = (TextView) findViewById(R.id.rateio_homens);
+        final TextView rateioHomem = (TextView) findViewById(R.id.rateio_homens);
         rateioHomem.setText("Rateio entre homens: R$"+formatarFloat.format(Float.parseFloat(rateio_homem)));
-        TextView rateioMisto = (TextView) findViewById(R.id.rateio_misto);
+        final TextView rateioMisto = (TextView) findViewById(R.id.rateio_misto);
         rateioMisto.setText("Rateio misto: R$"+formatarFloat.format(Float.parseFloat(rateio_misto)));
 
         final Button btnBuscarCEP = (Button) findViewById(R.id.btnChamaBuscaCEP);
@@ -96,10 +97,32 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText nomeEv = (EditText) findViewById(R.id.nomeEvento);
-                nomeEvento = nomeEv.getText().toString();
-                EditText numeroEv = (EditText) findViewById(R.id.txtBC_numero);
-                numero = numeroEv.getText().toString();
+                Realm realm = Realm.getDefaultInstance();
+
+                EditText nomeEvento = (EditText) findViewById(R.id.nomeEvento);
+
+
+                int pID = 1;
+                if (realm.where(Evento.class).max("id") != null) {
+                    pID = realm.where(Evento.class).max("id").intValue() + 1;
+                }
+
+                Evento evento = new Evento();
+                evento.setId(pID);
+                evento.setNomeEvento(nomeEvento.getText().toString());
+                evento.setMulher(mulher);
+                evento.setHomem(homem);
+                evento.setCrianca(crianca);
+                evento.setTotalGasto(valor_total);
+                evento.setRateioM(rateioMisto.toString());
+                evento.setRateioH(rateioHomem.toString());
+
+                realm.beginTransaction();
+                realm.copyToRealm(evento);
+                realm.commitTransaction();
+                realm.close();
+
+                Toast.makeText(Main3Activity.this, "Evento salvo!", Toast.LENGTH_SHORT).show();
 
                 Intent i = new Intent(Main3Activity.this, Main4Activity.class);
                 startActivity(i);
