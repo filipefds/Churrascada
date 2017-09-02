@@ -8,8 +8,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.List;
 
 import pooa20171.iff.br.churrascada.R;
+import pooa20171.iff.br.churrascada.realm.Evento;
+import pooa20171.iff.br.churrascada.view.Main4Activity;
 
 /**
  * Created by filipefds on 22/07/17.
