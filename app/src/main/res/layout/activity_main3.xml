@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pooa20171.iff.br.churrascada.view.Main3Activity"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/nomeEvento"
+        android:hint="Nome do Evento"
+        android:textAlignment="center"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="ENDEREÇO"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtCep"
+                android:hint="CEP"
+                android:numeric="decimal"
+                android:textAlignment="center"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnChamaBuscaCEP"
+                android:text="buscar"
+                android:textSize="10dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtBC_logradouro"
+                android:hint="logradouro"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtBC_numero"
+                android:hint="numero"
+                android:numeric="decimal"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtBC_complemento"
+            android:hint="complemento"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/txtBC_bairro"
+            android:hint="bairro"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtBC_localidade"
+                android:hint="localidade"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txtBC_uf"
+                android:hint="uf"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="DADOS ESTIMADOS"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cont_mulher"
+            android:hint="Total de mulheres"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cont_homem"
+            android:hint="Total de homens"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cont_crianca"
+            android:hint="Total de crianças"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/total_consumo"
+            android:hint="Valor total de consumo"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/rateio_homens"
+            android:hint="Rateio entre homens"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/rateio_misto"
+            android:hint="Rateio entre homens e mulheres"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/salvar"
+        android:text="salvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

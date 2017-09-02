@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo01"
+    tools:context="pooa20171.iff.br.churrascada.view.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="NÚMERO ESTIMADO DE PESSOAS"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMulher"
+                android:layout_marginTop="10dp"
+                android:text="MULHERES"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btMulherMenos"
+                android:text="MENOS"
+                android:background="@color/corFundo02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvMulherCont"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="170dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btMulherMais"
+                android:text="MAIS"
+                android:background="@color/corFundo02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHomem"
+                android:text="HOMENS"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btHomemMenos"
+                android:text="MENOS"
+                android:background="@color/corFundo02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvHomemCont"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="170dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btHomemMais"
+                android:text="MAIS"
+                android:background="@color/corFundo02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvCrianca"
+                android:text="CRIANÇAS"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btCriancaMenos"
+                android:text="MENOS"
+                android:background="@color/corFundo02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvCriancaCont"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_width="170dp"
+                android:layout_height="30dp" />
+
+            <Button
+                android:id="@+id/btCriancaMais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/corFundo02"
+                android:text="MAIS" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button01"
+        android:layout_marginTop="20dp"
+        android:background="@color/corFundo02"
+        android:text="VER LISTA DE COMPRAS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button04"
+        android:layout_marginTop="20dp"
+        android:background="@color/corFundo02"
+        android:text="HISTORICO DE EVENTOS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button02"
+        android:layout_marginTop="20dp"
+        android:background="@color/corFundo02"
+        android:text="GITHUB DO DESENVOLVEDOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
